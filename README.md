@@ -4,15 +4,17 @@
 
 <img src="https://raw.githubusercontent.com/LRY89757/ASPIRE/v0.1/assets/media/covervideo.gif" alt="ASPIRE robot demonstrations" width="100%">
 
-## News
-
-- **[2026-10] ASPIRE v1.0 is out!** ASPIRE can now solve a Rubik's Cube, and it achieves 98%+ success on all 80 LIBERO-Pro Goal / Object / Spatial / Long tasks. The original release remains available on the [`v0.1`](https://github.com/LRY89757/ASPIRE/tree/v0.1) branch.
-
 ASPIRE is a new type of continual learning: "training" is skill refinement instead of gradient descent. 
 
 "Trained model" is a repo of sensorimotor skills instead of floating weights. 
 
 “Distributed training” is a panel of agents each practicing a different skill instead of sharded minibatches.
+
+## News
+
+- **[2026-10] ASPIRE v1.0 is out!** ASPIRE can now solve a Rubik's Cube, and it achieves 98%+ success on all 80 LIBERO-Pro Goal / Object / Spatial / Long tasks. The original release remains available on the [`v0.1`](https://github.com/LRY89757/ASPIRE/tree/v0.1) branch.
+
+- **[2026-07] ASPIRE v0.1 is out!**
 
 ## Quick Start
 
