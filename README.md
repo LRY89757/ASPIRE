@@ -4,6 +4,10 @@
 
 <img src="https://raw.githubusercontent.com/LRY89757/ASPIRE/v0.1/assets/media/covervideo.gif" alt="ASPIRE robot demonstrations" width="100%">
 
+## News
+
+- **[2026-10] ASPIRE v1.0 is out!** ASPIRE can now solve a Rubik's Cube, and it achieves 98%+ success on all 80 LIBERO-Pro Goal / Object / Spatial / Long tasks. The original release remains available on the [`v0.1`](https://github.com/LRY89757/ASPIRE/tree/v0.1) branch.
+
 ASPIRE is a new type of continual learning: "training" is skill refinement instead of gradient descent. 
 
 "Trained model" is a repo of sensorimotor skills instead of floating weights. 
@@ -47,29 +51,29 @@ Name the suite and experiment explicitly. If neither is named, the agent should 
     <tr>
       <td>LIBERO-Pro</td>
       <td>Fix Loop</td>
-      <td><a href="https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/sim/.claude/libero/fix-loop/INSTRUCTIONS.md"><code>libero/fix-loop/</code></a></td>
+      <td><a href=".claude/skills/iterative-debugging/SKILL.md"><code>iterative-debugging/</code></a></td>
       <td rowspan="3"><video src="https://github.com/user-attachments/assets/15c0b425-9fe9-4313-8a5b-8c7da54c24b7" width="240" controls></video></td>
     </tr>
     <tr>
       <td>Robosuite</td>
       <td>Fix Loop</td>
-      <td><a href="https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/sim/.claude/robosuite/fix-loop/INSTRUCTIONS.md"><code>robosuite/fix-loop/</code></a></td>
+      <td><a href=".claude/skills/iterative-debugging/SKILL.md"><code>iterative-debugging/</code></a></td>
     </tr>
     <tr>
       <td>BEHAVIOR-1K</td>
       <td>Fix Loop</td>
-      <td><a href="https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/sim/.claude/behavior/fix-loop/INSTRUCTIONS.md"><code>behavior/fix-loop/</code></a></td>
+      <td><a href=".claude/skills/iterative-debugging/behavior/SKILL.md"><code>iterative-debugging/behavior/</code></a></td>
     </tr>
     <tr>
       <td>LIBERO-Pro</td>
       <td>Evolutionary Search</td>
-      <td><a href="https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/sim/.claude/libero/evosearch/INSTRUCTIONS.md"><code>libero/evosearch/</code></a></td>
+      <td><a href=".claude/skills/evosearch/SKILL.md"><code>evosearch/</code></a></td>
       <td rowspan="2"><video src="https://github.com/user-attachments/assets/edd2e5e1-b7d6-408a-bb62-23729df14db2" width="240" controls></video></td>
     </tr>
     <tr>
       <td>Robosuite</td>
       <td>Evolutionary Search</td>
-      <td><a href="https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/sim/.claude/robosuite/evosearch/INSTRUCTIONS.md"><code>robosuite/evosearch/</code></a></td>
+      <td><a href=".claude/skills/evosearch/SKILL.md"><code>evosearch/</code></a></td>
     </tr>
     <tr>
       <td>LIBERO</td>
