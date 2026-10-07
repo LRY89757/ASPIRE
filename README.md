@@ -28,8 +28,8 @@ ASPIRE is a new type of continual learning: "training" is skill refinement inste
     <td><video src="https://github.com/user-attachments/assets/5084c4df-7dc6-45c4-89a2-e1d439951d95" width="100%" controls></video></td>
   </tr>
   <tr>
-    <td>Cross-embodiment sim-to-real<br>Claude Opus 4.6 (sim), GPT-5.5 (real)<br> <a href="https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/real/README.md">Reproduce</a></td>
-    <td>Online real-world learning<br>GPT-6 Astra<br><a href="docs/system2.md#solve-a-rubiks-cube">Reproduce</a></td>
+    <td><a href="https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/real/README.md">Cross-embodiment sim-to-real</a><br>Claude Opus 4.6 (sim), GPT-5.5 (real)</td>
+    <td><a href="docs/system2.md#solve-a-rubiks-cube">Online real-world learning</a><br>GPT-6 Astra</td>
   </tr>
 </table>
 
