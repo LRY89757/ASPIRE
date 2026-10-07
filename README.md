@@ -20,16 +20,16 @@ ASPIRE is a new type of continual learning: "training" is skill refinement inste
 
 <table>
   <tr>
-    <th width="50%">Table Bussing</th>
-    <th width="50%">Rubik's Cube</th>
+    <th width="50%">Cross-embodiment sim-to-real</th>
+    <th width="50%">Online real-world learning</th>
   </tr>
   <tr>
     <td><video src="https://github.com/user-attachments/assets/ce86d1c1-582e-4388-9eb8-2b9027252eec" width="100%" controls></video></td>
     <td><video src="https://github.com/user-attachments/assets/5084c4df-7dc6-45c4-89a2-e1d439951d95" width="100%" controls></video></td>
   </tr>
   <tr>
-    <td><a href="https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/real/README.md">Cross-embodiment sim-to-real</a><br>Claude Opus 4.6 (sim), GPT-5.5 (real)</td>
-    <td><a href="docs/system2.md#solve-a-rubiks-cube">Online real-world learning</a><br>GPT-6 Astra</td>
+    <td><a href="https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/real/README.md">Long Horizon Table Bussing</a><br>Claude Opus 4.6 (sim), GPT-5.5 (real)</td>
+    <td><a href="docs/system2.md#solve-a-rubiks-cube">Rubik's Cube</a><br>GPT-6 Astra</td>
   </tr>
 </table>
 
