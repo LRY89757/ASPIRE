@@ -12,7 +12,7 @@ ASPIRE is a new type of continual learning: "training" is skill refinement inste
 
 ## News
 
-- **[2026-10] ASPIRE v1.0 is out!** ASPIRE can now solve a Rubik's Cube, and it achieves 98%+ success on all 80 LIBERO-Pro Goal / Object / Spatial / Long tasks. The original release remains available on the [`v0.1`](https://github.com/LRY89757/ASPIRE/tree/v0.1) branch.
+- **[2026-10] ASPIRE v1.0 is out!** ASPIRE can now solve a Rubik's Cube, and it achieves 98%+ success on 80 LIBERO-Pro Goal / Object / Spatial / Long tasks.
 
 - **[2026-07] ASPIRE v0.1 is out!**
 
@@ -28,8 +28,8 @@ ASPIRE is a new type of continual learning: "training" is skill refinement inste
     <td><video src="https://github.com/user-attachments/assets/5084c4df-7dc6-45c4-89a2-e1d439951d95" width="100%" controls></video></td>
   </tr>
   <tr>
-    <td>Cross-embodiment sim-to-real<br>Claude Opus 4.6 (sim), GPT-5.5 (real)<br>Re-run: <a href="https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/real/README.md">v0.1 codebase</a></td>
-    <td>Online real-world learning<br>GPT-6 Astra<br>Re-run: <a href="docs/system2.md#solve-a-rubiks-cube">v1.0 codebase</a></td>
+    <td>Cross-embodiment sim-to-real<br>Claude Opus 4.6 (sim), GPT-5.5 (real)<br> <a href="https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/real/README.md">Reproduce</a></td>
+    <td>Online real-world learning<br>GPT-6 Astra<br><a href="docs/system2.md#solve-a-rubiks-cube">Reproduce</a></td>
   </tr>
 </table>
 
