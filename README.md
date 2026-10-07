@@ -2,7 +2,7 @@
 
 [Project Page](https://research.nvidia.com/labs/gear/aspire/) &ensp;|&ensp; [Paper](https://arxiv.org/abs/2607.00272)
 
-<img src="https://raw.githubusercontent.com/LRY89757/ASPIRE/v0.1/assets/media/covervideo.gif" alt="ASPIRE robot demonstrations" width="100%">
+<img src="assets/media/evoforest.gif" alt="ASPIRE discovering /skills across simulation tasks" width="100%">
 
 ASPIRE is a new type of continual learning: "training" is skill refinement instead of gradient descent. 
 
@@ -15,6 +15,23 @@ ASPIRE is a new type of continual learning: "training" is skill refinement inste
 - **[2026-10] ASPIRE v1.0 is out!** ASPIRE can now solve a Rubik's Cube, and it achieves 98%+ success on all 80 LIBERO-Pro Goal / Object / Spatial / Long tasks. The original release remains available on the [`v0.1`](https://github.com/LRY89757/ASPIRE/tree/v0.1) branch.
 
 - **[2026-07] ASPIRE v0.1 is out!**
+
+## Real-World Results
+
+<table>
+  <tr>
+    <th width="50%">Table Bussing</th>
+    <th width="50%">Rubik's Cube</th>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/ce86d1c1-582e-4388-9eb8-2b9027252eec" width="100%" controls></video></td>
+    <td><video src="https://github.com/user-attachments/assets/5084c4df-7dc6-45c4-89a2-e1d439951d95" width="100%" controls></video></td>
+  </tr>
+  <tr>
+    <td>Cross-embodiment sim-to-real<br>Claude Opus 4.6 (sim), GPT-5.5 (real)<br>Re-run: <a href="https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/real/README.md">v0.1 codebase</a></td>
+    <td>Online real-world learning<br>GPT-6 Astra<br>Re-run: <a href="docs/system2.md#solve-a-rubiks-cube">v1.0 codebase</a></td>
+  </tr>
+</table>
 
 ## Quick Start
 
@@ -97,12 +114,6 @@ Name the suite and experiment explicitly. If neither is named, the agent should 
       <td>Robosuite</td>
       <td>Training Law</td>
       <td><a href="https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/sim/.claude/robosuite/training-law/INSTRUCTIONS.md"><code>robosuite/training-law/</code></a></td>
-    </tr>
-    <tr>
-      <td>YAM Bimanual</td>
-      <td>Sim-to-Real</td>
-      <td><a href="https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/real/README.md"><code>aspire/real/</code></a></td>
-      <td><video src="https://github.com/user-attachments/assets/91b38cd3-3a38-4f56-9758-f986d50c5956" width="240" controls></video></td>
     </tr>
   </tbody>
 </table>
