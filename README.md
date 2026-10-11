@@ -14,7 +14,7 @@ ASPIRE is a new type of continual learning: "training" is skill refinement inste
 
 - **[2026-10] ASPIRE v1.0 is out!** ASPIRE can now solve a Rubik's Cube, and it achieves 99% success on 80 LIBERO-Pro Goal / Object / Spatial / Long tasks and selected Robosuite, BEHAVIOR-1K tasks.
 
-- **[2026-07] ASPIRE v0.1 is out!**
+- **[2026-07] ASPIRE v0.1 is out!** We achieve SOTA results on LIBERO-Pro, Robosuite, and BEHAVIOR-1K with Claude Opus 4.6! Also check out our table bussing sim-to-real demos!
 
 ## Real-World Results
 
