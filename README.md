@@ -33,6 +33,12 @@ ASPIRE is a new type of continual learning: "training" is skill refinement inste
   </tr>
 </table>
 
+## Model Scaling
+
+<img src="assets/media/model_cost.png" alt="ASPIRE success vs. API cost across coding-agent models" width="100%">
+
+ASPIRE improves with the underlying model. On 10 LIBERO-Pro tasks, success rises from 15% (GPT-6 Luna) to 99% (Claude Opus 5.5), and the strongest models are not the most expensive: the green line marks the cost/success frontier.
+
 ## Quick Start
 
 ### Run with a coding agent
