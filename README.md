@@ -158,9 +158,9 @@ If you find ASPIRE useful in your research, please cite:
 ```bibtex
 @article{lu2026aspire,
   title   = {ASPIRE: Agentic /Skills Discovery for Robotics},
-  author  = {Runyu Lu and Yubo Wu and Ethan Kou and Letian Fu and Wenli Xiao and
+  author  = {Runyu Lu and Yubo Wu and Ethan Kou and Haotian Lin and Letian Fu and Wenli Xiao and
              Ajay Mandlekar and Yinzhen Xu and Guanya Shi and Ken Goldberg and
-             Ang Chen and Mosharaf Chowdhury and Yuke Zhu and Linxi "Jim" Fan and Guanzhi Wang},
+             Ang Chen and Mosharaf Chowdhury and Jan Kautz and Yuke Zhu and Linxi "Jim" Fan and Guanzhi Wang},
   year    = {2026},
   journal = {arXiv preprint arXiv:2607.00272},
   url     = {https://arxiv.org/abs/2607.00272}
