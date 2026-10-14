@@ -3,7 +3,7 @@
 ## Setup
 
 ```bash
-cd /path/to/aspire-unified-harness
+cd /path/to/ASPIRE
 scripts/bootstrap_robosuite.sh
 source .venv-robosuite/bin/activate
 export MUJOCO_GL=egl PYOPENGL_PLATFORM=egl EGL_PLATFORM=device

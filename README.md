@@ -55,18 +55,20 @@ ASPIRE improves with the underlying model. On 10 LIBERO-Pro tasks, success rises
 To get started with ASPIRE, launch a coding agent such as Codex or Claude Code and enter the following prompt:
 
 ```text
-Clone the v0.1 branch of https://github.com/LRY89757/ASPIRE/,
-read AGENTS.md and run the complete ASPIRE LIBERO-Pro Goal-Swap Quick Start for all ten 
-tasks in the libero_goal_swap suite.
+Clone the v1.0 branch of https://github.com/LRY89757/ASPIRE/,
+read the iterative-debugging skill (.claude/skills/iterative-debugging/SKILL.md) and
+docs/libero-pro.md, and run the complete ASPIRE LIBERO-Pro Goal-Swap Quick Start for
+all ten tasks in the libero_goal_swap suite.
 
-Before executing, report the required GPUs, credentials, gated weights, 
-services, expected runtime, seed partitions, and output paths. Wait for 
-my confirmation before launching. Do not access real-robot code.
+Before executing, report the required GPUs, credentials, gated weights,
+services, expected runtime, seed partitions, and output paths. Wait for
+my confirmation before launching. Do not access real-robot code or instructions
+(AGENTS.md, docs/system2*.md, docs/yam-real.md, src/cap_harness/yam_real/).
 ```
 
-The canonical procedure for a quick start is [`aspire/sim/.claude/libero/fix-loop/QUICKSTART.md`](https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/sim/.claude/libero/fix-loop/QUICKSTART.md). The agent must complete preflight and wait for confirmation before installing dependencies, starting services, or launching trials.
+The canonical procedure for the quick start is the iterative-debugging skill, [`.claude/skills/iterative-debugging/SKILL.md`](.claude/skills/iterative-debugging/SKILL.md), with setup in [`docs/libero-pro.md`](docs/libero-pro.md) and [`docs/host-setup.md`](docs/host-setup.md). The agent must complete preflight and wait for confirmation before installing dependencies, starting services, or launching trials.
 
-**Reference agent environments:** ASPIRE is coding-agent agnostic. Our simulation workflow is packaged for reproduction with Claude Code with Opus 4.6 1M, while the real-robot agent experiments were conducted with Codex. All coding agents can follow the model-neutral instructions in [`AGENTS.md`](https://github.com/LRY89757/ASPIRE/blob/v0.1/AGENTS.md), although orchestration behavior may differ.
+**Reference agent environments:** ASPIRE is coding-agent agnostic. The simulation workflow is packaged as agent skills for Claude Code ([`.claude/skills/`](.claude/skills/)) and Codex ([`.codex/skills/`](.codex/skills/)): `iterative-debugging` and `evosearch`. [`AGENTS.md`](AGENTS.md) holds the execution rules for the real-robot System 2 agent ([operator runbook](docs/system2.md)) and is not needed for simulation runs.
 
 ### Reproduce full paper results
 

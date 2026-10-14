@@ -9,7 +9,7 @@ and the torso.
 ## Setup
 
 ```bash
-cd /path/to/aspire-unified-harness
+cd /path/to/ASPIRE
 scripts/bootstrap_behavior.sh --accept-dataset-tos       # Python 3.11, Isaac Sim 5.1, cuRobo, datasets
 # cuRobo is compiled for the profile whose architecture matches GPU 0 (nvidia-smi compute
 # capability); pass --profile <name> or CAP_HARNESS_PROFILE to build for another card.

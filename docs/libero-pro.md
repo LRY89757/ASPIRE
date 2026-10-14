@@ -3,7 +3,7 @@
 ## Setup
 
 ```bash
-cd /path/to/aspire-unified-harness
+cd /path/to/ASPIRE
 scripts/bootstrap_libero.sh
 source .venv-libero/bin/activate
 export LIBERO_CONFIG_PATH="$PWD/.libero"
