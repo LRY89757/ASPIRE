@@ -35,9 +35,18 @@ ASPIRE is a new type of continual learning: "training" is skill refinement inste
 
 ## Model Scaling
 
-<img src="assets/media/model_cost.png" alt="ASPIRE success vs. API cost across coding-agent models" width="100%">
+<table>
+  <tr>
+    <th width="50%">Success vs. API cost</th>
+    <th width="50%">LIBERO-Pro, Robosuite, BEHAVIOR-1K</th>
+  </tr>
+  <tr>
+    <td><img src="assets/media/model_cost.gif" alt="ASPIRE success vs. API cost across twelve coding-agent models" width="100%"></td>
+    <td><img src="assets/media/benchmarks.gif" alt="ASPIRE success rates on LIBERO-Pro, Robosuite and BEHAVIOR-1K by model" width="100%"></td>
+  </tr>
+</table>
 
-ASPIRE improves with the underlying model. On 10 LIBERO-Pro tasks, success rises from 15% (GPT-6 Luna) to 99% (Claude Opus 5.5), and the strongest models are not the most expensive: the green line marks the cost/success frontier.
+ASPIRE improves with the underlying model. On 10 LIBERO-Pro tasks, success rises from 15% (GPT-6 Luna) to 99% (Claude Opus 5.5), and the strongest models are not the most expensive: the green line marks the cost/success frontier. Across LIBERO-Pro, Robosuite and BEHAVIOR-1K, each newer model raises success, reaching 97–100% on most tasks.
 
 ## Quick Start
 
