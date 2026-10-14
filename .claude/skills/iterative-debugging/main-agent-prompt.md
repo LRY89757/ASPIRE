@@ -26,7 +26,7 @@ python3 .claude/skills/iterative-debugging/scripts/init_run.py \
   --heldout-count 100
 ```
 
-LIBERO keeps the existing defaults: development 51–65, unseen-check 66–70, held-out 1–50.
+LIBERO keeps the existing defaults: development 51–65, unseen-check 66–80, held-out 1–50.
 Read `dev_seeds`, `unseen_seeds`, and `heldout_count` from `$RUN_ROOT/campaign.json` when
 assigning or resuming work. Pass them as DEV_SEEDS, UNSEEN_SEEDS, and HELDOUT_COUNT. Keep
 existing run settings.
@@ -279,7 +279,7 @@ order:
    Return missing coverage/artifacts to the same worker. File existence alone is
    not readiness; regenerate progress and confirm `stage1-done` after these checks.
 3. Compare the two rates in the summary: a program strong on development seeds but weak on the
-   unseen-check seeds (LIBERO: 66–70; Robosuite: 126–130) is overfitted, and its held-out result
+   unseen-check seeds (LIBERO: 66–80; Robosuite: 126–130) is overfitted, and its held-out result
    will be poor. Still run Stage 2 -- that is the measurement -- but treat any skill it proposes
    with the same suspicion, since a pattern extracted from an overfitted program is a pattern
    that did not generalize to seeds it had never touched.

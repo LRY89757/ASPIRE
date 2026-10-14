@@ -219,7 +219,7 @@ def main() -> int:
         "--unseen-seeds",
         default=None,
         help="seeds a worker must never probe; range-checked in the addenda "
-        "(default: unseen_seeds from campaign.json, e.g. 66-70 for LIBERO, 126-130 for Robosuite)",
+        "(default: unseen_seeds from campaign.json, e.g. 66-80 for LIBERO, 126-130 for Robosuite)",
     )
     parser.add_argument(
         "--out-dir",

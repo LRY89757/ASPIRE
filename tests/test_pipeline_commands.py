@@ -160,7 +160,7 @@ def test_every_debug_version_is_scored_on_the_whole_development_set() -> None:
 def test_the_unseen_band_is_measured_once_and_never_tuned_against() -> None:
     """Measure the unseen band once without tuning against it.
 
-    The unseen-check seeds (campaign.json's `unseen_seeds`, e.g. 66-70 for LIBERO,
+    The unseen-check seeds (campaign.json's `unseen_seeds`, e.g. 66-80 for LIBERO,
     126-130 for Robosuite) are the only cheap evidence that a program is not tuned
     to the seeds it was debugged on. Debugging against them spends exactly the
     thing they exist to provide.

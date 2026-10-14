@@ -50,7 +50,7 @@ outputs/
 ## Task List
 
 Take the task list from the user — anything below the success threshold in the fix loop
-held-out results is a candidate (default threshold: <80%). Verify exact task ids before
+held-out results is a candidate (default threshold: <90%). Verify exact task ids before
 dispatch, e.g. for LIBERO:
 
 ```bash

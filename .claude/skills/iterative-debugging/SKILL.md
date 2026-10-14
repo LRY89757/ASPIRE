@@ -41,7 +41,7 @@ held-out partition are distinct scenes; Robosuite uses `saved`).
    `python3 .claude/skills/iterative-debugging/scripts/gen_progress.py`.
    For Robosuite, append `--dev-seeds $(seq 101 125) --unseen-seeds $(seq 126 130)
    --heldout-count 100` to initialization. LIBERO defaults remain development 51–65,
-   unseen-check 66–70, and held-out 1–50. Read the assigned development seeds, unseen-check
+   unseen-check 66–80, and held-out 1–50. Read the assigned development seeds, unseen-check
    seeds, and HELDOUT_COUNT from `campaign.json`, preserving those settings when resuming.
 2. Follow [main-agent-prompt.md](main-agent-prompt.md) as coordinator. You are also the
    curriculum: choose each round's tasks from what the library can currently teach, and record
@@ -51,7 +51,7 @@ held-out partition are distinct scenes; Robosuite uses `saved`).
    the assigned development seeds without reading external baseline outputs, and grade the
    skills they used in `skill_report.json`. Debugging is organized by failure mode rather than
    by seed, and every version is scored on all assigned development seeds. The selected program
-   is then measured once on the assigned unseen-check seeds (LIBERO: 66–70; Robosuite: 126–130)
+   is then measured once on the assigned unseen-check seeds (LIBERO: 66–80; Robosuite: 126–130)
    before being handed over.
 3. The coordinator (not workers) runs the Stage 2 held-out evaluation (seeds 1–$HELDOUT_COUNT) for
    each `stage1-done` task with [scripts/run_validation.py](scripts/run_validation.py).

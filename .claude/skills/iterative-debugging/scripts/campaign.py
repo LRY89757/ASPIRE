@@ -54,7 +54,7 @@ def task_dir(run_root: Path, benchmark: str, suite: str, task_id: int) -> Path:
 
 DEFAULT_HELDOUT_COUNT = 50
 DEV_SEEDS = list(range(51, 66))
-UNSEEN_SEEDS = list(range(66, 71))
+UNSEEN_SEEDS = list(range(66, 81))
 
 
 def campaign_settings(run_root: Path | None) -> dict:

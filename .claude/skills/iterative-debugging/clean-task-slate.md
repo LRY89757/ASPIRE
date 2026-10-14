@@ -11,7 +11,7 @@ Use this before rerunning a task or suite.
 5. Keep the three seed bands configured in `campaign.json` separate, and keep
    `--init-mode $INIT_MODE` (the benchmark's own, from the Benchmark Profiles table) on every
    run: `dev_seeds` are debugged against (LIBERO 51–65, Robosuite 101–125 by default),
-   `unseen_seeds` are measured once at the end of Stage 1 and never tuned against (LIBERO 66–70,
+   `unseen_seeds` are measured once at the end of Stage 1 and never tuned against (LIBERO 66–80,
    Robosuite 126–130 by default), and the held-out partition is reserved for the coordinator's
    Stage 2 (LIBERO 1–50, Robosuite 1–100 by default). A rerun that debugs against the unseen-check
    seeds has spent the only cheap evidence that a program generalizes; archive the task folder and

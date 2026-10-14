@@ -338,7 +338,7 @@ def test_find_run_dir_prefers_cli_line_then_newest(tmp_path: Path):
 @pytest.mark.parametrize(
     ("arguments", "dev_seeds", "heldout_count", "unseen_seeds"),
     [
-        ([], list(range(51, 66)), 50, list(range(66, 71))),
+        ([], list(range(51, 66)), 50, list(range(66, 81))),
         (
             [
                 "--dev-seeds",

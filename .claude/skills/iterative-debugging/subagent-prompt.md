@@ -185,7 +185,7 @@ Every command below is written with these five variables. Set them once, from th
 |---|---|---|
 | `CAP_HARNESS` | `.venv-libero/bin/cap-harness` | `.venv-robosuite/bin/cap-harness` |
 | `INIT_MODE` | `seeded` | `saved` (`seeded` is a LIBERO-only switch) |
-| Default seeds | development 51–65; unseen-check 66–70; held-out 1–50 | development 101–125; unseen-check 126–130; held-out 1–100 |
+| Default seeds | development 51–65; unseen-check 66–80; held-out 1–50 | development 101–125; unseen-check 126–130; held-out 1–100 |
 | `SERVICE_PORTS` | `8114 8115 8116` | `8114 8115 8116` (add `8118` for cuRobo programs) |
 | `RUN_ENV` | `LIBERO_CONFIG_PATH=$PWD/.libero MUJOCO_GL=egl PYOPENGL_PLATFORM=egl EGL_PLATFORM=device TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1 MUJOCO_EGL_DEVICE_ID=$GPU` | `MUJOCO_GL=egl PYOPENGL_PLATFORM=egl EGL_PLATFORM=device MUJOCO_EGL_DEVICE_ID=$GPU` |
 
