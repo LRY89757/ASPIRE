@@ -2,7 +2,7 @@
 
 [Project Page](https://research.nvidia.com/labs/gear/aspire/) &ensp;|&ensp; [Paper](https://arxiv.org/abs/2607.00272)
 
-<img src="assets/media/evoforest_v2.gif" alt="ASPIRE discovering /skills across simulation tasks" width="100%">
+<img src="assets/media/skill_discovery.gif" alt="ASPIRE discovering /skills across simulation and real-robot tasks" width="100%">
 
 ASPIRE is a new type of continual learning: "training" is skill refinement instead of gradient descent. 
 
@@ -41,8 +41,8 @@ ASPIRE is a new type of continual learning: "training" is skill refinement inste
     <th width="50%">LIBERO-Pro, Robosuite, BEHAVIOR-1K</th>
   </tr>
   <tr>
-    <td><img src="assets/media/model_cost.gif" alt="ASPIRE success vs. API cost across twelve coding-agent models" width="100%"></td>
-    <td><img src="assets/media/benchmarks_v2.gif" alt="ASPIRE success rates on LIBERO-Pro, Robosuite and BEHAVIOR-1K by model" width="100%"></td>
+    <td><img src="assets/media/success_vs_cost.gif" alt="ASPIRE success vs. API cost across twelve coding-agent models" width="100%"></td>
+    <td><img src="assets/media/benchmark_results.gif" alt="ASPIRE success rates on LIBERO-Pro, Robosuite and BEHAVIOR-1K by model" width="100%"></td>
   </tr>
 </table>
 
