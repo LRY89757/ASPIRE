@@ -2,13 +2,51 @@
 
 [Project Page](https://research.nvidia.com/labs/gear/aspire/) &ensp;|&ensp; [Paper](https://arxiv.org/abs/2607.00272)
 
-<img src="assets/media/covervideo.gif" alt="ASPIRE robot demonstrations" width="100%">
+<img src="assets/media/skill_discovery.gif" alt="ASPIRE discovering /skills across simulation and real-robot tasks" width="100%">
 
-ASPIRE is a new type of continual learning: "training" is skill refinement instead of gradient descent. 
+ASPIRE is a new type of continual learning: "training" is skill refinement instead of gradient descent.
 
-"Trained model" is a repo of sensorimotor skills instead of floating weights. 
+"Trained model" is a repo of sensorimotor skills instead of floating weights.
 
 “Distributed training” is a panel of agents each practicing a different skill instead of sharded minibatches.
+
+## News
+
+- **[2026-10] ASPIRE v1.0 is out!** ASPIRE can now solve a Rubik's Cube, and it achieves 99% success on 80 LIBERO-Pro Goal / Object / Spatial / Long tasks and selected Robosuite, BEHAVIOR-1K tasks.
+
+- **[2026-07] ASPIRE v0.1 is out!** We achieve SOTA results on LIBERO-Pro, Robosuite, and BEHAVIOR-1K with Claude Opus 4.6! Also check out our table bussing sim-to-real demos!
+
+## Real-World Results
+
+<table>
+  <tr>
+    <th width="50%">Cross-embodiment sim-to-real</th>
+    <th width="50%">Online real-world learning</th>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/ce86d1c1-582e-4388-9eb8-2b9027252eec" width="100%" controls></video></td>
+    <td><video src="https://github.com/user-attachments/assets/5084c4df-7dc6-45c4-89a2-e1d439951d95" width="100%" controls></video></td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/NVlabs/ASPIRE/blob/v0.1/aspire/real/README.md">Long Horizon Table Bussing</a><br>Claude Opus 4.6 (sim), GPT-5.5 (real)</td>
+    <td><a href="https://github.com/NVlabs/ASPIRE/blob/v1.0/docs/system2.md#solve-a-rubiks-cube">Rubik's Cube</a><br>GPT-6 Astra</td>
+  </tr>
+</table>
+
+## Model Scaling
+
+<table>
+  <tr>
+    <th width="50%">Success vs. API cost</th>
+    <th width="50%">LIBERO-Pro, Robosuite, BEHAVIOR-1K</th>
+  </tr>
+  <tr>
+    <td><img src="assets/media/success_vs_cost.gif" alt="ASPIRE success vs. API cost across twelve coding-agent models" width="100%"></td>
+    <td><img src="assets/media/benchmark_results.gif" alt="ASPIRE success rates on LIBERO-Pro, Robosuite and BEHAVIOR-1K by model" width="100%"></td>
+  </tr>
+</table>
+
+ASPIRE improves with the underlying model. On 10 LIBERO-Pro tasks, success rises from 15% (GPT-6 Luna) to 99% (Claude Opus 5.5), and the strongest models are not the most expensive: the green line marks the cost/success frontier. Across LIBERO-Pro, Robosuite and BEHAVIOR-1K, Claude Opus 5.5 reaches 97–100% success on every task.
 
 ## Quick Start
 
@@ -17,20 +55,26 @@ ASPIRE is a new type of continual learning: "training" is skill refinement inste
 To get started with ASPIRE, launch a coding agent such as Codex or Claude Code and enter the following prompt:
 
 ```text
-Clone the repo: https://github.com/NVlabs/ASPIRE/, Read AGENTS.md and 
-run the complete ASPIRE LIBERO-Pro Goal-Swap Quick Start for all ten 
-tasks in the libero_goal_swap suite.
+Clone the v1.0 branch of https://github.com/NVlabs/ASPIRE/,
+read the iterative-debugging skill (.claude/skills/iterative-debugging/SKILL.md) and
+docs/libero-pro.md, and run the complete ASPIRE LIBERO-Pro Goal-Swap Quick Start for
+all ten tasks in the libero_goal_swap suite.
 
-Before executing, report the required GPUs, credentials, gated weights, 
-services, expected runtime, seed partitions, and output paths. Wait for 
-my confirmation before launching. Do not access real-robot code.
+Before executing, report the required GPUs, credentials, gated weights,
+services, expected runtime, seed partitions, and output paths. Wait for
+my confirmation before launching. Do not access real-robot code or instructions
+(AGENTS.md, docs/system2*.md, docs/yam-real.md, src/cap_harness/yam_real/).
 ```
 
-The canonical procedure for a quick start is [`aspire/sim/.claude/libero/fix-loop/QUICKSTART.md`](aspire/sim/.claude/libero/fix-loop/QUICKSTART.md). The agent must complete preflight and wait for confirmation before installing dependencies, starting services, or launching trials.
+The canonical procedure for the quick start is the iterative-debugging skill, [`.claude/skills/iterative-debugging/SKILL.md`](.claude/skills/iterative-debugging/SKILL.md), with setup in [`docs/libero-pro.md`](docs/libero-pro.md) and [`docs/host-setup.md`](docs/host-setup.md). The agent must complete preflight and wait for confirmation before installing dependencies, starting services, or launching trials.
 
-**Reference agent environments:** ASPIRE is coding-agent agnostic. Our simulation workflow is packaged for reproduction with Claude Code with Opus 4.6 1M, while the real-robot agent experiments were conducted with Codex. All coding agents can follow the model-neutral instructions in [`AGENTS.md`](AGENTS.md), although orchestration behavior may differ.
+**Reference agent environments:** ASPIRE is coding-agent agnostic. The simulation workflow is packaged as agent skills for Claude Code ([`.claude/skills/`](.claude/skills/)) and Codex ([`.codex/skills/`](.codex/skills/)): `iterative-debugging` and `evosearch`. [`AGENTS.md`](AGENTS.md) holds the execution rules for the real-robot System 2 agent ([operator runbook](docs/system2.md)) and is not needed for simulation runs.
 
-### Reproduce full paper results
+### Reproduction runbooks by code version
+
+For the v1.0 unified harness, use the fix-loop and evolutionary-search runbooks below.
+Legacy ablations remain on v0.1; the table links each experiment to the code version
+that implements it.
 
 Name the suite and experiment explicitly. If neither is named, the agent should present this table and stop for selection.
 
@@ -40,6 +84,7 @@ Name the suite and experiment explicitly. If neither is named, the agent should 
       <th>Suite</th>
       <th>Experiment</th>
       <th>Runbook</th>
+      <th>Code version</th>
       <th>Video</th>
     </tr>
   </thead>
@@ -47,56 +92,59 @@ Name the suite and experiment explicitly. If neither is named, the agent should 
     <tr>
       <td>LIBERO-Pro</td>
       <td>Fix Loop</td>
-      <td><a href="aspire/sim/.claude/libero/fix-loop/INSTRUCTIONS.md"><code>libero/fix-loop/</code></a></td>
+      <td><a href="https://github.com/NVlabs/ASPIRE/blob/v1.0/.claude/skills/iterative-debugging/SKILL.md"><code>iterative-debugging/</code></a></td>
+      <td><code>v1.0</code></td>
       <td rowspan="3"><video src="https://github.com/user-attachments/assets/15c0b425-9fe9-4313-8a5b-8c7da54c24b7" width="240" controls></video></td>
     </tr>
     <tr>
       <td>Robosuite</td>
       <td>Fix Loop</td>
-      <td><a href="aspire/sim/.claude/robosuite/fix-loop/INSTRUCTIONS.md"><code>robosuite/fix-loop/</code></a></td>
+      <td><a href="https://github.com/NVlabs/ASPIRE/blob/v1.0/.claude/skills/iterative-debugging/SKILL.md"><code>iterative-debugging/</code></a></td>
+      <td><code>v1.0</code></td>
     </tr>
     <tr>
       <td>BEHAVIOR-1K</td>
       <td>Fix Loop</td>
-      <td><a href="aspire/sim/.claude/behavior/fix-loop/INSTRUCTIONS.md"><code>behavior/fix-loop/</code></a></td>
+      <td><a href="https://github.com/NVlabs/ASPIRE/blob/v1.0/.claude/skills/iterative-debugging/behavior/SKILL.md"><code>iterative-debugging/behavior/</code></a></td>
+      <td><code>v1.0</code></td>
     </tr>
     <tr>
       <td>LIBERO-Pro</td>
       <td>Evolutionary Search</td>
-      <td><a href="aspire/sim/.claude/libero/evosearch/INSTRUCTIONS.md"><code>libero/evosearch/</code></a></td>
+      <td><a href="https://github.com/NVlabs/ASPIRE/blob/v1.0/.claude/skills/evosearch/SKILL.md"><code>evosearch/</code></a></td>
+      <td><code>v1.0</code></td>
       <td rowspan="2"><video src="https://github.com/user-attachments/assets/edd2e5e1-b7d6-408a-bb62-23729df14db2" width="240" controls></video></td>
     </tr>
     <tr>
       <td>Robosuite</td>
       <td>Evolutionary Search</td>
-      <td><a href="aspire/sim/.claude/robosuite/evosearch/INSTRUCTIONS.md"><code>robosuite/evosearch/</code></a></td>
+      <td><a href="https://github.com/NVlabs/ASPIRE/blob/v1.0/.claude/skills/evosearch/SKILL.md"><code>evosearch/</code></a></td>
+      <td><code>v1.0</code></td>
     </tr>
     <tr>
       <td>LIBERO</td>
       <td>Zero-Shot Transfer</td>
-      <td><a href="aspire/sim/.claude/libero/zeroshot-transfer/INSTRUCTIONS.md"><code>libero/zeroshot-transfer/</code></a></td>
+      <td><a href="https://github.com/NVlabs/ASPIRE/blob/v0.1/aspire/sim/.claude/libero/zeroshot-transfer/INSTRUCTIONS.md"><code>libero/zeroshot-transfer/</code></a></td>
+      <td><code>v0.1</code></td>
       <td rowspan="4"><video src="https://github.com/user-attachments/assets/8676fa10-6719-477f-9d60-a4ad241a3de3" width="240" controls></video></td>
     </tr>
     <tr>
       <td>LIBERO-Long-Pro</td>
       <td>Library-Size Scaling</td>
-      <td><a href="aspire/sim/.claude/libero/library-size-scaling/INSTRUCTIONS.md"><code>libero/library-size-scaling/</code></a></td>
+      <td><a href="https://github.com/NVlabs/ASPIRE/blob/v0.1/aspire/sim/.claude/libero/library-size-scaling/INSTRUCTIONS.md"><code>libero/library-size-scaling/</code></a></td>
+      <td><code>v0.1</code></td>
     </tr>
     <tr>
       <td>LIBERO-Long-Pro</td>
       <td>Inference-Time Scaling</td>
-      <td><a href="aspire/sim/.claude/libero/inference-time-scaling/INSTRUCTIONS.md"><code>libero/inference-time-scaling/</code></a></td>
+      <td><a href="https://github.com/NVlabs/ASPIRE/blob/v0.1/aspire/sim/.claude/libero/inference-time-scaling/INSTRUCTIONS.md"><code>libero/inference-time-scaling/</code></a></td>
+      <td><code>v0.1</code></td>
     </tr>
     <tr>
       <td>Robosuite</td>
       <td>Training Law</td>
-      <td><a href="aspire/sim/.claude/robosuite/training-law/INSTRUCTIONS.md"><code>robosuite/training-law/</code></a></td>
-    </tr>
-    <tr>
-      <td>YAM Bimanual</td>
-      <td>Sim-to-Real</td>
-      <td><a href="aspire/real/README.md"><code>aspire/real/</code></a></td>
-      <td><video src="https://github.com/user-attachments/assets/91b38cd3-3a38-4f56-9758-f986d50c5956" width="240" controls></video></td>
+      <td><a href="https://github.com/NVlabs/ASPIRE/blob/v0.1/aspire/sim/.claude/robosuite/training-law/INSTRUCTIONS.md"><code>robosuite/training-law/</code></a></td>
+      <td><code>v0.1</code></td>
     </tr>
   </tbody>
 </table>
@@ -105,19 +153,21 @@ Name the suite and experiment explicitly. If neither is named, the agent should 
 Before a paper-scale launch, the agent must report the selected tasks, seed schedule, expected trial count and runtime, GPU and credential requirements, services, and output paths, then wait for explicit confirmation.
 
 > [!WARNING]
-> ASPIRE executes language-model-generated Python with full import access. Trial processes and watchdogs are not a security sandbox. Run generated code on an isolated host without credentials or sensitive mounts, restrict network access, and never grant a simulation agent access to physical hardware. Real-robot work requires the controls in [`aspire/real/AGENTS.md`](aspire/real/AGENTS.md) and separate operator authorization.
+> ASPIRE executes language-model-generated Python with full import access. Trial processes and watchdogs are not a security sandbox. Run generated code on an isolated host without credentials or sensitive mounts, restrict network access, and never grant a simulation agent access to physical hardware. Real-robot work requires separate operator authorization and the version-specific controls: [v0.1 table bussing](https://github.com/NVlabs/ASPIRE/blob/v0.1/aspire/real/AGENTS.md) or [v1.0 YAM System 2](https://github.com/NVlabs/ASPIRE/blob/v1.0/AGENTS.md) and its [operator runbook](https://github.com/NVlabs/ASPIRE/blob/v1.0/docs/system2.md).
 
 ## Contribution Guidelines
 
-Start with [CONTRIBUTING.md](CONTRIBUTING.md). Third-party contributions must include a Developer Certificate of Origin sign-off.
+Start with [CONTRIBUTING.md](https://github.com/NVlabs/ASPIRE/blob/v0.1/CONTRIBUTING.md). Third-party contributions must include a Developer Certificate of Origin sign-off.
 
 ## License
 
 ASPIRE material owned by NVIDIA or contributed under the project license is
-available under the [Apache License 2.0](LICENSE). Third-party materials retain
-their original terms. See [NOTICE](NOTICE) and the central
-[licensing and compliance index](LICENSES/README.md) before using or
-redistributing the full stack.
+available under the [Apache License 2.0](https://github.com/NVlabs/ASPIRE/blob/v1.0/LICENSE). Third-party materials retain
+their original terms. See [NOTICE](https://github.com/NVlabs/ASPIRE/blob/v1.0/NOTICE),
+the [pinned dependency sources](https://github.com/NVlabs/ASPIRE/blob/v1.0/configs/dependency-lock.json),
+and each dependency’s license before using or redistributing the full stack. The
+[v0.1 licensing and compliance index](https://github.com/NVlabs/ASPIRE/blob/v0.1/LICENSES/README.md)
+applies to the original release.
 
 ## Citation
 
@@ -126,9 +176,9 @@ If you find ASPIRE useful in your research, please cite:
 ```bibtex
 @article{lu2026aspire,
   title   = {ASPIRE: Agentic /Skills Discovery for Robotics},
-  author  = {Runyu Lu and Yubo Wu and Ethan Kou and Letian Fu and Wenli Xiao and
+  author  = {Runyu Lu and Yubo Wu and Ethan Kou and Haotian Lin and Letian Fu and Wenli Xiao and
              Ajay Mandlekar and Yinzhen Xu and Guanya Shi and Ken Goldberg and
-             Ang Chen and Mosharaf Chowdhury and Yuke Zhu and Linxi "Jim" Fan and Guanzhi Wang},
+             Ang Chen and Mosharaf Chowdhury and Jan Kautz and Yuke Zhu and Linxi "Jim" Fan and Guanzhi Wang},
   year    = {2026},
   journal = {arXiv preprint arXiv:2607.00272},
   url     = {https://arxiv.org/abs/2607.00272}
