@@ -44,23 +44,24 @@ ASPIRE is a new type of continual learning: "training" is skill refinement inste
     <td><img src="assets/media/success_vs_cost.gif" alt="ASPIRE success vs. API cost across twelve coding-agent models" width="100%"></td>
     <td><img src="assets/media/benchmark_results.gif" alt="ASPIRE success rates on LIBERO-Pro, Robosuite and BEHAVIOR-1K by model" width="100%"></td>
   </tr>
-</table>
-
-<table>
   <tr>
-    <th colspan="4">Stronger models discover better strategies</th>
+    <th colspan="2">Stronger models discover better strategies</th>
   </tr>
   <tr>
-    <td width="25%"><video src="https://github.com/user-attachments/assets/f4b77674-2ada-4f10-a3de-8126d9512342" width="100%" controls></video></td>
-    <td width="25%"><video src="https://github.com/user-attachments/assets/9645e221-7f6c-4c6d-99b2-dce515afbf6e" width="100%" controls></video></td>
-    <td width="25%"><video src="https://github.com/user-attachments/assets/d66e195f-93f8-403d-ab47-e098cba2f58b" width="100%" controls></video></td>
-    <td width="25%"><video src="https://github.com/user-attachments/assets/9c795d80-761a-48b4-838e-d20bcd905fd5" width="100%" controls></video></td>
+    <td><video src="https://github.com/user-attachments/assets/f4b77674-2ada-4f10-a3de-8126d9512342" width="100%" controls></video></td>
+    <td><video src="https://github.com/user-attachments/assets/9645e221-7f6c-4c6d-99b2-dce515afbf6e" width="100%" controls></video></td>
   </tr>
   <tr>
-    <td><b>Book under a shelf</b><br>Let go of the book and push it under.</td>
-    <td><b>Push a plate</b><br>Clear the clutter, or lift the plate over it.</td>
-    <td><b>Open the bottom drawer</b><br>Tilt the gripper to hook the low handle.</td>
-    <td><b>Mug in the microwave</b><br>Grasp the handle; keep the mug upright.</td>
+    <td><b>Book under a shelf</b><br>Opus 5.5 and Astra let go of the book and push it under the low shelf.</td>
+    <td><b>Push a plate</b><br>Opus 5.5 clears the clutter first; Astra lifts the plate over it.</td>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/d66e195f-93f8-403d-ab47-e098cba2f58b" width="100%" controls></video></td>
+    <td><video src="https://github.com/user-attachments/assets/9c795d80-761a-48b4-838e-d20bcd905fd5" width="100%" controls></video></td>
+  </tr>
+  <tr>
+    <td><b>Open the bottom drawer</b><br>Opus 5.5 and Astra tilt the gripper and hook the low handle, as the human does.</td>
+    <td><b>Mug in the microwave</b><br>Opus 5.5 and Astra grasp the handle and slide the mug in upright.</td>
   </tr>
 </table>
 
