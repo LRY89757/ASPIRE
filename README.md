@@ -72,10 +72,6 @@ The canonical procedure for the quick start is the iterative-debugging skill, [`
 
 ### Reproduction runbooks by code version
 
-For the v1.0 unified harness, use the fix-loop and evolutionary-search runbooks below.
-Legacy ablations remain on v0.1; the table links each experiment to the code version
-that implements it.
-
 Name the suite and experiment explicitly. If neither is named, the agent should present this table and stop for selection.
 
 <table>
