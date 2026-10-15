@@ -66,7 +66,7 @@ my confirmation before launching. Do not access real-robot code or instructions
 (AGENTS.md, docs/system2*.md, docs/yam-real.md, src/cap_harness/yam_real/).
 ```
 
-The canonical procedure for the quick start is the iterative-debugging skill, [`.claude/skills/iterative-debugging/SKILL.md`](.claude/skills/iterative-debugging/SKILL.md), with setup in [`docs/libero-pro.md`](docs/libero-pro.md) and [`docs/host-setup.md`](docs/host-setup.md). The agent must complete preflight and wait for confirmation before installing dependencies, starting services, or launching trials.
+Before running, set up the host (CUDA, uv, and the Hugging Face token for the gated SAM3 weights) with [`docs/host-setup.md`](docs/host-setup.md).
 
 **Reference agent environments:** ASPIRE is coding-agent agnostic. The simulation workflow is packaged as agent skills for Claude Code ([`.claude/skills/`](.claude/skills/)) and Codex ([`.codex/skills/`](.codex/skills/)): `iterative-debugging` and `evosearch`. [`AGENTS.md`](AGENTS.md) holds the execution rules for the real-robot System 2 agent ([operator runbook](docs/system2.md)) and is not needed for simulation runs.
 

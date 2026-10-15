@@ -82,8 +82,10 @@ The selected mode is recorded in `run.json` (`init_mode`), the task context, and
 `libero.get_task_metadata()["init_mode"]`. Earlier buggy seeded runs restored saved state 0;
 those results should not be treated as evaluation across independently sampled layouts.
 
-SAM3 requires authorized access to its gated model. Missing credentials are an explicit provider
-blocker; credentials must never be copied into the repository or run artifacts.
+SAM3 requires authorized access to its gated model; request access and log in to Hugging Face as
+described in [Host setup](host-setup.md#sam3-model-weights-need-a-hugging-face-token). Missing
+credentials are an explicit provider blocker; credentials must never be copied into the repository or
+run artifacts.
 
 ## Task examples
 
