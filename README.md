@@ -44,6 +44,25 @@ ASPIRE is a new type of continual learning: "training" is skill refinement inste
     <td><img src="assets/media/success_vs_cost.gif" alt="ASPIRE success vs. API cost across twelve coding-agent models" width="100%"></td>
     <td><img src="assets/media/benchmark_results.gif" alt="ASPIRE success rates on LIBERO-Pro, Robosuite and BEHAVIOR-1K by model" width="100%"></td>
   </tr>
+  <tr>
+    <th colspan="2">Stronger models discover better strategies</th>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/f4b77674-2ada-4f10-a3de-8126d9512342" width="100%" controls></video></td>
+    <td><video src="https://github.com/user-attachments/assets/9645e221-7f6c-4c6d-99b2-dce515afbf6e" width="100%" controls></video></td>
+  </tr>
+  <tr>
+    <td><b>Book under a shelf</b><br>Opus 5.5 and Astra let go of the book and push it under the low shelf.</td>
+    <td><b>Push a plate</b><br>Opus 5.5 clears the clutter first; Astra lifts the plate over it.</td>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/d66e195f-93f8-403d-ab47-e098cba2f58b" width="100%" controls></video></td>
+    <td><video src="https://github.com/user-attachments/assets/9c795d80-761a-48b4-838e-d20bcd905fd5" width="100%" controls></video></td>
+  </tr>
+  <tr>
+    <td><b>Open the bottom drawer</b><br>Opus 5.5 and Astra tilt the gripper and hook the low handle, as the human does.</td>
+    <td><b>Mug in the microwave</b><br>Opus 5.5 and Astra grasp the handle and slide the mug in upright.</td>
+  </tr>
 </table>
 
 ASPIRE improves with the underlying model. On 10 LIBERO-Pro tasks, success rises from 15% (GPT-6 Luna) to 99% (Claude Opus 5.5), and the strongest models are not the most expensive: the green line marks the cost/success frontier. Across LIBERO-Pro, Robosuite and BEHAVIOR-1K, Claude Opus 5.5 reaches 97–100% success on every task.
