@@ -218,32 +218,32 @@ agent opens both grippers and homes before acting; do not launch it while holdin
 an object. The recipes use the native low-level CAP tools, with no WAM checkpoint
 or VLM supervisor required. Ground all poses in the current calibrated station.
 
-**Unscrew and pour:**
+For an already-ready agent, type the corresponding quoted task prompt into its
+terminal instead of launching another session. For a reproducible trial, record the
+model/reasoning settings, object setup and count, gripper type, operator
+interventions, and verified final predicates; use the runbook's
+[recording option](#stop-or-restart) to save the run.
+
+### Unscrew and pour
 
 ```bash
 scripts/start_system2_agent.sh --allow-motion \
   "Read examples/yam_real/unscrew_bottle/TASK_CONTEXT.md. Unscrew the bottle cap, place it separately, pour the pill onto the table, and leave the bottle upright and released."
 ```
 
-**Pill insertion and bottle closure:**
+### Pill insertion and bottle closure
 
 ```bash
 scripts/start_system2_agent.sh --allow-motion \
   "Read examples/yam_real/pill_in_bottle/TASK_CONTEXT.md. Put the pill into the bottle, fit and tighten its cap, and leave the bottle standing on the table. Verify containment and cap seating; do not claim final tightness unless established."
 ```
 
-**Inverted cup nesting:**
+### Inverted cup nesting
 
 ```bash
 scripts/start_system2_agent.sh --allow-motion \
   "Read examples/yam_real/cup_stacking/TASK_CONTEXT.md. Nest all the cups upside down into one stable stack and release it."
 ```
-
-For an already-ready agent, type the corresponding quoted task prompt into its
-terminal instead of launching another session. For the cube, use the existing
-command below. For a reproducible trial, record the model/reasoning settings,
-object setup and count, gripper type, operator interventions, and verified final
-predicates; use the runbook's [recording option](#stop-or-restart) to save the run.
 
 ### Solve a Rubik's Cube
 
