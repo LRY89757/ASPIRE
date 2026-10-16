@@ -105,18 +105,18 @@ Name the suite and experiment explicitly. If neither is named, the agent should 
   <tbody>
     <tr>
       <td>LIBERO-Pro</td>
-      <td>Fix Loop</td>
+      <td>Iterative-debugging loop</td>
       <td><a href=".claude/skills/iterative-debugging/SKILL.md"><code>iterative-debugging/</code></a></td>
       <td rowspan="3"><video src="https://github.com/user-attachments/assets/15c0b425-9fe9-4313-8a5b-8c7da54c24b7" width="240" controls></video></td>
     </tr>
     <tr>
       <td>Robosuite</td>
-      <td>Fix Loop</td>
+      <td>Iterative-debugging loop</td>
       <td><a href=".claude/skills/iterative-debugging/SKILL.md"><code>iterative-debugging/</code></a></td>
     </tr>
     <tr>
       <td>BEHAVIOR-1K</td>
-      <td>Fix Loop</td>
+      <td>Iterative-debugging loop</td>
       <td><a href=".claude/skills/iterative-debugging/behavior/SKILL.md"><code>iterative-debugging/behavior/</code></a></td>
     </tr>
     <tr>
@@ -148,7 +148,7 @@ Name the suite and experiment explicitly. If neither is named, the agent should 
     </tr>
     <tr>
       <td>Robosuite</td>
-      <td>Training Law</td>
+      <td>Debugging-Token-Ablation</td>
       <td><a href="https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/sim/.claude/robosuite/training-law/INSTRUCTIONS.md"><code>robosuite/training-law/</code></a></td>
     </tr>
   </tbody>
