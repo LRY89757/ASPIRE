@@ -54,7 +54,7 @@ ASPIRE is a new type of continual learning: "training" is skill refinement inste
     <th width="50%">LIBERO-Pro, Robosuite, BEHAVIOR-1K</th>
   </tr>
   <tr>
-    <td><img src="assets/media/success_vs_cost.gif" alt="ASPIRE success vs. API cost across twelve coding-agent models" width="100%"></td>
+    <td><img src="assets/media/success_vs_api_cost.gif" alt="ASPIRE success vs. API cost across twelve coding-agent models" width="100%"></td>
     <td><img src="assets/media/benchmark_results.gif" alt="ASPIRE success rates on LIBERO-Pro, Robosuite and BEHAVIOR-1K by model" width="100%"></td>
   </tr>
   <tr>
