@@ -46,24 +46,6 @@ ASPIRE is a new type of continual learning: "training" is skill refinement inste
   </tr>
 </table>
 
-### Reproduce the real-robot manipulation demos
-
-Use the [System 2 operator runbook](docs/system2.md#reproduce-the-manipulation-demos)
-to prepare a calibrated YAM station and launch a fresh agent with the appropriate
-text-based task skill:
-
-- [Rubik's Cube](examples/yam_real/rubiks_cube/TASK_CONTEXT.md).
-- [Unscrew a bottle and pour](examples/yam_real/unscrew_bottle/TASK_CONTEXT.md).
-- [Insert a pill and close the bottle](examples/yam_real/pill_in_bottle/TASK_CONTEXT.md).
-- [Nest cups upside down](examples/yam_real/cup_stacking/TASK_CONTEXT.md).
-
-The [manipulation skill entrypoint](.agents/skills/manipulation-tasks/SKILL.md)
-routes the agent to these recipes. They provide grasp strategies, recovery, and
-physical completion checks without requiring episode logs or fixed-coordinate
-replays. The three new recipes are distilled from demo sessions, not a new
-real-robot validation; the pill recipe explicitly distinguishes a seated cap from
-verified final tightness. Re-ground the current scene and verify the actual outcome.
-
 ## Model Scaling
 
 <table>
@@ -187,6 +169,24 @@ Name the suite and experiment explicitly. If neither is named, the agent should 
 
 
 Before a paper-scale launch, the agent must report the selected tasks, seed schedule, expected trial count and runtime, GPU and credential requirements, services, and output paths, then wait for explicit confirmation.
+
+### Reproduce the real-robot manipulation demos
+
+Use the [System 2 operator runbook](docs/system2.md#reproduce-the-manipulation-demos)
+to prepare a calibrated YAM station and launch a fresh agent with the appropriate
+text-based task skill:
+
+- [Rubik's Cube](examples/yam_real/rubiks_cube/TASK_CONTEXT.md).
+- [Unscrew a bottle and pour](examples/yam_real/unscrew_bottle/TASK_CONTEXT.md).
+- [Insert a pill and close the bottle](examples/yam_real/pill_in_bottle/TASK_CONTEXT.md).
+- [Nest cups upside down](examples/yam_real/cup_stacking/TASK_CONTEXT.md).
+
+The [manipulation skill entrypoint](.agents/skills/manipulation-tasks/SKILL.md)
+routes the agent to these recipes. They provide grasp strategies, recovery, and
+physical completion checks without requiring episode logs or fixed-coordinate
+replays. The three new recipes are distilled from demo sessions, not a new
+real-robot validation; the pill recipe explicitly distinguishes a seated cap from
+verified final tightness. Re-ground the current scene and verify the actual outcome.
 
 > [!WARNING]
 > ASPIRE executes language-model-generated Python with full import access. Trial processes and watchdogs are not a security sandbox. Run generated code on an isolated host without credentials or sensitive mounts, restrict network access, and never grant a simulation agent access to physical hardware. Real-robot work requires the controls in [`aspire/real/AGENTS.md`](https://github.com/LRY89757/ASPIRE/blob/v0.1/aspire/real/AGENTS.md) and separate operator authorization.
