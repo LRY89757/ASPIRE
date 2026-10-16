@@ -40,9 +40,9 @@ ASPIRE is a new type of continual learning: "training" is skill refinement inste
     <td width="33%"><video src="https://github.com/user-attachments/assets/18a8484f-a0bd-4574-9891-f5c49d906bc5" width="100%" controls></video></td>
   </tr>
   <tr>
-    <td>Stack Cups<br>GPT-6 Astra</td>
-    <td>Unscrew Bottle Cap<br>GPT-6 Astra</td>
-    <td>Pill in Bottle<br>GPT-6 Astra</td>
+    <td><a href="examples/yam_real/cup_stacking/TASK_CONTEXT.md">Stack Cups</a><br>GPT-6 Astra</td>
+    <td><a href="examples/yam_real/unscrew_bottle/TASK_CONTEXT.md">Unscrew Bottle Cap</a><br>GPT-6 Astra</td>
+    <td><a href="examples/yam_real/pill_in_bottle/TASK_CONTEXT.md">Pill in Bottle</a><br>GPT-6 Astra</td>
   </tr>
 </table>
 
