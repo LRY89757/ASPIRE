@@ -52,8 +52,7 @@ Use the [System 2 operator runbook](docs/system2.md#reproduce-the-manipulation-d
 to prepare a calibrated YAM station and launch a fresh agent with the appropriate
 text-based task skill:
 
-- [Rubik's Cube](examples/yam_real/rubiks_cube/TASK_CONTEXT.md) and its
-  [verified manipulation guide](.agents/skills/manipulation-tasks/rubiks-cube.md), unchanged.
+- [Rubik's Cube](examples/yam_real/rubiks_cube/TASK_CONTEXT.md).
 - [Unscrew a bottle and pour](examples/yam_real/unscrew_bottle/TASK_CONTEXT.md).
 - [Insert a pill and close the bottle](examples/yam_real/pill_in_bottle/TASK_CONTEXT.md).
 - [Nest cups upside down](examples/yam_real/cup_stacking/TASK_CONTEXT.md).
