@@ -33,6 +33,19 @@ ASPIRE is a new type of continual learning: "training" is skill refinement inste
   </tr>
 </table>
 
+<table>
+  <tr>
+    <td width="33%"><video src="https://github.com/user-attachments/assets/ca1b60b7-75ca-4d75-a126-fd2431c77687" width="100%" controls></video></td>
+    <td width="33%"><video src="https://github.com/user-attachments/assets/20ead750-444f-49f9-b8e5-567ffa6d1367" width="100%" controls></video></td>
+    <td width="33%"><video src="https://github.com/user-attachments/assets/566863a8-1d91-4f49-b9f5-7eee354a56a0" width="100%" controls></video></td>
+  </tr>
+  <tr>
+    <td>Pill in Bottle<br>GPT-6 Astra</td>
+    <td>Unscrew Bottle Cap<br>GPT-6 Astra</td>
+    <td>Stack Cups<br>GPT-6 Astra</td>
+  </tr>
+</table>
+
 ## Model Scaling
 
 <table>
