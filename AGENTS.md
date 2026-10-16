@@ -22,6 +22,10 @@ once before the first robot command. For a cube task, read
 [manipulation-tasks](.agents/skills/manipulation-tasks/SKILL.md) and its linked task
 context and cube guide before acting. Do not reread an unchanged skill later.
 
+For bottle/pill or cup-stacking tasks, read the matching recipe linked from
+[manipulation-tasks](.agents/skills/manipulation-tasks/SKILL.md) before acting;
+do not load unrelated recipes.
+
 Native MCP schemas are authoritative for tool names and arguments. Discover the capability graph
 once per runtime and reuse it. Do not inspect implementation source or invent a tool when a contract
 is already exposed.

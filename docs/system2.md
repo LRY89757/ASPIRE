@@ -189,6 +189,62 @@ checks readiness and waits, omit `--allow-motion`. To attach another fresh agent
 rerun the launcher; services can remain running. Each motion-enabled fresh agent
 performs Home again.
 
+### Reproduce the manipulation demos
+
+After completing the station setup above, select **one** task recipe for the
+physical objects on the table. These text-based skills describe contact strategy,
+recovery, and completion evidence; they do not require the original recordings,
+Codex rollouts, or saved Cartesian targets.
+
+| Task | Text-based task skill | Scene and completion evidence |
+| --- | --- | --- |
+| Rubik's Cube | [Task context](../examples/yam_real/rubiks_cube/TASK_CONTEXT.md) + [verified cube guide](../.agents/skills/manipulation-tasks/rubiks-cube.md) | A scrambled cube; verify all six faces uniform, aligned layers, and stable released placement. |
+| Unscrew and pour | [Bottle-opening recipe](../examples/yam_real/unscrew_bottle/TASK_CONTEXT.md) | A rigid bottle with a conventional screw cap and a pill inside; verify detached cap, pill on the table, and released upright bottle. |
+| Pill insertion and closure | [Pill-and-cap recipe](../examples/yam_real/pill_in_bottle/TASK_CONTEXT.md) | An open bottle, a loose pill that fits its mouth, and a compatible cap; verify containment and threaded seating, and report final tightness separately when unverified. |
+| Inverted cup nesting | [Cup-stacking recipe](../examples/yam_real/cup_stacking/TASK_CONTEXT.md) | Compatible tapered cups; count all requested cups and verify one stable, opening-down nested stack after release. |
+
+[AGENTS.md](../AGENTS.md) directs the agent to the
+[manipulation skill entrypoint](../.agents/skills/manipulation-tasks/SKILL.md).
+The original cube task context and manipulation guide are unchanged. The three
+additional recipes are distilled from demo-session experience and checked against
+the current tool contracts, but have not yet been revalidated with a fresh robot
+session. In particular, retained cap seating does not establish final tightening
+torque. Do not treat these instructions as a guarantee of success or skip the
+recipe's physical verification.
+
+Prepare the matching objects, leave the arms' startup Home paths clear, and run
+one of the commands below from the repository root. Each fresh motion-enabled
+agent opens both grippers and homes before acting; do not launch it while holding
+an object. The recipes use the native low-level CAP tools, with no WAM checkpoint
+or VLM supervisor required. Ground all poses in the current calibrated station.
+
+**Unscrew and pour:**
+
+```bash
+scripts/start_system2_agent.sh --allow-motion \
+  "Read examples/yam_real/unscrew_bottle/TASK_CONTEXT.md. Unscrew the bottle cap, place it separately, pour the pill onto the table, and leave the bottle upright and released."
+```
+
+**Pill insertion and bottle closure:**
+
+```bash
+scripts/start_system2_agent.sh --allow-motion \
+  "Read examples/yam_real/pill_in_bottle/TASK_CONTEXT.md. Put the pill into the bottle, fit and tighten its cap, and leave the bottle standing on the table. Verify containment and cap seating; do not claim final tightness unless established."
+```
+
+**Inverted cup nesting:**
+
+```bash
+scripts/start_system2_agent.sh --allow-motion \
+  "Read examples/yam_real/cup_stacking/TASK_CONTEXT.md. Nest all the cups upside down into one stable stack and release it."
+```
+
+For an already-ready agent, type the corresponding quoted task prompt into its
+terminal instead of launching another session. For the cube, use the existing
+command below. For a reproducible trial, record the model/reasoning settings,
+object setup and count, gripper type, operator interventions, and verified final
+predicates; use the runbook's [recording option](#stop-or-restart) to save the run.
+
 ### Solve a Rubik's Cube
 
 With the same services running, start a fresh agent with the packaged task:
